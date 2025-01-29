@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@NoArgsConstructor
+//@NoArgsConstructor
 
 public class Employee
 {
@@ -21,6 +21,8 @@ public class Employee
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
+    }
+    public Employee() {
     }
 
     public String getId() {

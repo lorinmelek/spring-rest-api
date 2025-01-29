@@ -1,6 +1,7 @@
 package com.lorinmelek.spring_rest_api.services;
 
 import com.lorinmelek.spring_rest_api.model.Employee;
+import com.lorinmelek.spring_rest_api.model.UpdateEmployeeRequest;
 import com.lorinmelek.spring_rest_api.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,5 +26,11 @@ public class EmployeeService
     }
     public Employee saveEmployee(Employee newEmployee){
         return employeeRepository.saveEmployee(newEmployee);
+    }
+    public boolean deleteEmployee(String id){
+        return employeeRepository.deleteEmployee(id);
+    }
+    public Employee updateEmployee(String id, UpdateEmployeeRequest request){
+        return employeeRepository.updateEmployee(id, request);
     }
 }
